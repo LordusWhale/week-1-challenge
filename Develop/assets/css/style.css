@@ -1,6 +1,12 @@
+/*
+    Page defaults
+*/
+
 :root {
     --text: #ffffff;
-    --primary:
+    --primary: #d9dcd6;
+    --secondary: #2a607c;
+    --alt: #0072bb;
 }
 
 * {
@@ -8,16 +14,28 @@
     padding: 0;
     margin: 0;
     color: var(--text);
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #d9dcd6;
+    background-color: var(--primary);
 }
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+/*
+    Main header and naviagtion
+*/
 
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
+    background-color: var(--secondary);
 }
 
 header h1 {
@@ -26,9 +44,25 @@ header h1 {
 }
 
 header h1 .seo {
-    color: #d9dcd6;
+    color: var(--primary);
+}
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
 }
 
+header nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 25px;
+}
+
+/*
+    Mobile menu styles
+*/
 .mobile-menu {
     display: none;
 
@@ -46,10 +80,11 @@ header h1 .seo {
 
 .mobile-menu button {
     font-size: large;
-    background-color: #0072bb;
+    background-color: var(--alt);
     border: none;
     padding: 0.5em;
     border-radius: 10%;
+    cursor: pointer;
 }
 
 .mobile-menu-container div {
@@ -57,7 +92,7 @@ header h1 .seo {
     left: -100%;
     height: 100%;
     width: 50%;
-    background-color: #2a607c;
+    background-color: var(--secondary);
     position: fixed;
     gap: 50px;
     justify-content: space-between;
@@ -77,27 +112,9 @@ header h1 .seo {
     text-decoration: underline;
     padding: 0.5em;
 } 
-header nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
 
-header nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    margin-left: 25px;
-}
 
-a {
-    text-decoration: none;
-}
 
-p {
-    font-size: 16px;
-}
 
 .hero {
     height: 800px;
@@ -118,24 +135,31 @@ p {
     margin-left: 25px;
 }
 
+/*
+    Main content (Section and Aside)
+*/
+
 main {
     display: flex;
     gap: 80px;
     margin: 0 20px;
+    height: 100
 }
 
 main div {
     width: 75%;
-    display: inline-block;
-
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 20px;
 }
-
+/*
+    Middle content
+*/
 section {
-    margin-bottom: 20px;
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
+    background-color: var(--alt);
 }
 
 section img {
@@ -147,15 +171,15 @@ section h2 {
     font-size: 36px;
 }
 
-
+/*
+    Right side content
+*/
 aside {
     padding: 20px;
-    clear: both;
-    float: right;
     width: 20%;
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
+    background-color: #2589bd; 
 }
 
 article {
@@ -172,6 +196,10 @@ article img {
     margin: 10px auto;
     max-width: 150px;
 }
+
+/*
+    Responsive design elements, widths chosen as layout breaks
+*/
 
 @media (max-width: 1100px) {
     main {
@@ -217,7 +245,9 @@ article img {
     }
 }
 
-
+/*
+    Footer
+*/
 
 footer {
     padding: 30px;
