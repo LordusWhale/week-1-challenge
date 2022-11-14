@@ -78,13 +78,10 @@ header nav ul li {
 
 }
 
-.mobile-menu button {
-    font-size: large;
-    background-color: var(--alt);
-    border: none;
-    padding: 0.5em;
+.mobile-menu svg {
     border-radius: 10%;
     cursor: pointer;
+    fill: var(--primary);
 }
 
 .mobile-menu-container div {
